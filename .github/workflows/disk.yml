@@ -7,8 +7,11 @@ jobs:
   run-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: run shell command
+      - name: list block devices
         shell: bash
         run: |
           lsblk
+      - name: show free space
+        shell: bash
+        run: |
           df -h

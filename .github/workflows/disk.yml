@@ -1,0 +1,14 @@
+name: check disk space
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run shell command
+        shell: bash
+        run: |
+          lsblk
+          df -h
